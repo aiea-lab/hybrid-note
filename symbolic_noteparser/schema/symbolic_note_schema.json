@@ -1,0 +1,20 @@
+{
+    "document_id":"string",
+    "elements": [
+        {
+            "id": "string",
+            "type": "string",
+            "content": "string",
+            "page": 1,
+            "location": "string",
+            "attributes": {}
+        }
+    ],
+    "relationships": [
+        {
+            "type": "string",
+            "source": "string",
+            "target": "string"
+        }
+    ]
+}

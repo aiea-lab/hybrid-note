@@ -1,0 +1,5 @@
+Document ID: DATA_STRUCTURE_page_11
+Elements detected: 34
+Relationships detected: 18
+
+No errors found.

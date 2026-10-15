@@ -1,0 +1,6 @@
+Document ID: DATA_STRUCTURE_page_10
+Elements detected: 37
+Relationships detected: 10
+
+Errors:
+- e17: content must be a string or null
