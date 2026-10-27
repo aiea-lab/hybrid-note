@@ -1,0 +1,16 @@
+{
+    "Bullet": "ListNode",
+    "Numbered List": "OrderedListNode",
+    "Checkbox": "TaskNode",
+    "Arrow": "Edge",
+    "Date": "DateNode",
+    "Highlight": "ImportanceNode",
+    "Underline": "EmphasisNode",
+    "Box": "ContainerNode",
+    "Sketch": "ImageNode",
+    "Equation": "MathNode",
+    "Circle": "FocusNode",
+    "Table": "TableNode",
+    "Graph/Chart": "GraphNode",
+    "Star/Exclamation": "ImportanceNode"
+}

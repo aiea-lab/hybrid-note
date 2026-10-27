@@ -1,0 +1,153 @@
+{
+  "document_id": "DATA_STRUCTURE_page_14",
+  "elements": [
+    {
+      "id": "e1",
+      "type": "EmphasisNode",
+      "content": "i> Tail Recursion",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e2",
+      "type": "ImageNode",
+      "content": "call stack sketch for tail recursion",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "labels": ["DOC()", "DOC()"], "note": "box with horizontal lines representing stack frames; curved arrow from bottom DOC() to top DOC()" }
+    },
+    {
+      "id": "e3",
+      "type": "EmphasisNode",
+      "content": "ii> Head Recursion (or other than last) (non Tail)",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e4",
+      "type": "ImageNode",
+      "content": "small call stack sketch",
+      "page": 1,
+      "location": "upper-middle",
+      "attributes": { "labels": ["DOC()", "DOC()", "DOC()"], "note": "box with curved arrows between frames" }
+    },
+    {
+      "id": "e5",
+      "type": "ImageNode",
+      "content": "large call stack sketch",
+      "page": 1,
+      "location": "upper-middle",
+      "attributes": { "labels": ["DOC()", "DOC()"], "note": "box with horizontal lines and curved arrow near top" }
+    },
+    {
+      "id": "e6",
+      "type": "ImageNode",
+      "content": "call stack sketch with question mark",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": { "labels": ["DOC()", "DOC()", "?"], "note": "box with squiggly lines representing unwinding, and '?' at bottom" }
+    },
+    {
+      "id": "e7",
+      "type": "EmphasisNode",
+      "content": "iii> indirect Recursion",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e8",
+      "type": "ImageNode",
+      "content": "call stack sketch labeled A()",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "labels": ["A()", "B()"], "note": "box with horizontal lines" }
+    },
+    {
+      "id": "e9",
+      "type": "ImageNode",
+      "content": "call stack sketch labeled B()",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "labels": ["B()", "A()"], "note": "box with horizontal lines" }
+    },
+    {
+      "id": "e10",
+      "type": "Edge",
+      "content": null,
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "note": "crossing double-headed arrows connecting the two call stack boxes e8 and e9" }
+    },
+    {
+      "id": "e11",
+      "type": "EmphasisNode",
+      "content": "iv> Excessive",
+      "page": 1,
+      "location": "center-right",
+      "attributes": { "style": "underline", "annotation": "Imp" }
+    },
+    {
+      "id": "e12",
+      "type": "ListNode",
+      "content": "Doesnot remember previously evaluated values.",
+      "page": 1,
+      "location": "center-right",
+      "attributes": { "list_marker": "•" }
+    },
+    {
+      "id": "e13",
+      "type": "EmphasisNode",
+      "content": "properties",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "underline (squiggly)" }
+    },
+    {
+      "id": "e14",
+      "type": "ListNode",
+      "content": "Base (or) Termination Condition (or) Anchor step.",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "list_marker": "i>" }
+    },
+    {
+      "id": "e15",
+      "type": "FocusNode",
+      "content": "or",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "circled", "note": "circled 'or' within item i>" }
+    },
+    {
+      "id": "e16",
+      "type": "ListNode",
+      "content": "Repeated step (or) Recursive step (or) inductive step.",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "list_marker": "ii>" }
+    },
+    {
+      "id": "e17",
+      "type": "MathNode",
+      "content": "fact(N) = { 1 , N=0 (Anchor or Base); N*fact(N-1) , otherwise (inductive step, Repeated) }",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "note": "piecewise function definition" }
+    }
+  ],
+  "relationships": [
+    { "type": "Edge", "source": "e2", "target": "e2" },
+    { "type": "Edge", "source": "e4", "target": "e5" },
+    { "type": "Edge", "source": "e5", "target": "e6" },
+    { "type": "Edge", "source": "e8", "target": "e9" },
+    { "type": "Edge", "source": "e9", "target": "e8" },
+    { "type": "Edge", "source": "e1", "target": "e2" },
+    { "type": "Edge", "source": "e3", "target": "e4" },
+    { "type": "Edge", "source": "e7", "target": "e8" },
+    { "type": "Edge", "source": "e14", "target": "e17" },
+    { "type": "Edge", "source": "e16", "target": "e17" }
+  ]
+}

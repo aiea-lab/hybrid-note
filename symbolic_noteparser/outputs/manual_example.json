@@ -1,0 +1,32 @@
+{
+    "document_id": "DATA_STRUCTURE_page_10",
+    "elements": [
+        {
+            "id": "e1",
+            "type": "DateNode",
+            "content": "28.4.2012",
+            "page": "1",
+            "location": "middle-left",
+            "attributes": {}
+        },
+        {
+            "id": "e2",
+            "type": "EmphasisNode",
+            "content": "precedence table",
+            "page": "1",
+            "location": "middle",
+            "attributes": {
+                "style": "underline"
+            }
+        },
+        {
+            "id": "e3",
+            "type": "MathNode",
+            "content": "a / b * c",
+            "page": "1",
+            "location": "upper-right",
+            "attributes": {}
+        }
+    ],
+    "relationships": []
+}

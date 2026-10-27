@@ -1,0 +1,279 @@
+{
+  "document_id": "DATA_STRUCTURE_page_12",
+  "elements": [
+    {
+      "id": "e1",
+      "type": "EmphasisNode",
+      "content": "Evaluation",
+      "page": 1,
+      "location": "upper-middle",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e2",
+      "type": "MathNode",
+      "content": "6-2=4",
+      "page": 1,
+      "location": "upper-middle",
+      "attributes": {}
+    },
+    {
+      "id": "e3",
+      "type": "FocusNode",
+      "content": "6-2",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "style": "circled" }
+    },
+    {
+      "id": "e4",
+      "type": "FocusNode",
+      "content": "6-2",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": { "style": "circled" }
+    },
+    {
+      "id": "e5",
+      "type": "ContainerNode",
+      "content": null,
+      "page": 1,
+      "location": "upper-middle",
+      "attributes": { "style": "box", "label": "Concept" }
+    },
+    {
+      "id": "e6",
+      "type": "ListNode",
+      "content": [
+        "Operand : push",
+        "Operator: i> pop",
+        "ii> evaluation",
+        "iii> push result"
+      ],
+      "page": 1,
+      "location": "upper-middle",
+      "attributes": { "contained_in": "e5", "note": "'not pushed in' annotation attached to Operator" }
+    },
+    {
+      "id": "e7",
+      "type": "EmphasisNode",
+      "content": "prefix",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e8",
+      "type": "MathNode",
+      "content": "-6,2,",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "note": "arrow points left" }
+    },
+    {
+      "id": "e9",
+      "type": "EmphasisNode",
+      "content": "postfix",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e10",
+      "type": "MathNode",
+      "content": "6,2,-",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": { "note": "arrow points right" }
+    },
+    {
+      "id": "e11",
+      "type": "TableNode",
+      "content": ["4", "6 (circled)", "2"],
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "note": "left-to-right stack cells: '4' with minus below, '6' circled with 6 below, '2' with 2 below" }
+    },
+    {
+      "id": "e12",
+      "type": "MathNode",
+      "content": "6-2=4",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "note": "result of prefix evaluation, arrow curving from stack cells" }
+    },
+    {
+      "id": "e13",
+      "type": "TableNode",
+      "content": ["6", "2 (circled inside 6)", "4"],
+      "page": 1,
+      "location": "center-right",
+      "attributes": { "note": "left-to-right stack cells: '6' with 6 below, '2' circled inside cell labeled 6, '4' with minus below" }
+    },
+    {
+      "id": "e14",
+      "type": "MathNode",
+      "content": "6-2=4",
+      "page": 1,
+      "location": "center-right",
+      "attributes": { "note": "result of postfix evaluation" }
+    },
+    {
+      "id": "e15",
+      "type": "EmphasisNode",
+      "content": "Sol",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e16",
+      "type": "MathNode",
+      "content": "8,2,3,^,1,2,3,^,+,5,1,*,+",
+      "page": 1,
+      "location": "center-left",
+      "attributes": {}
+    },
+    {
+      "id": "e17",
+      "type": "EmphasisNode",
+      "content": "i> postfix",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e18",
+      "type": "TableNode",
+      "content": [
+        "8", "2", "3", "8 (from 2^3)", "1", "2", "3", "6 (from 2*3)",
+        "7 (from 8/8+... )", "5", "1", "5", "12"
+      ],
+      "page": 1,
+      "location": "center",
+      "attributes": {
+        "note": "sequence of stack-cell diagrams tracking postfix evaluation of 8,2,3,^,1,2,3,^,+,5,1,*,+",
+        "labels_below": ["8", "2", "3", "^", "1", "2", "3", "*", "+", "5", "1", "*", "+"],
+        "intermediate_calcs": ["2^3", "8/8", "2*3", "5*1"]
+      }
+    },
+    {
+      "id": "e19",
+      "type": "EmphasisNode",
+      "content": "Ex:",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e20",
+      "type": "MathNode",
+      "content": "1 + 2 * 3 - 4",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e21",
+      "type": "EmphasisNode",
+      "content": "Sol",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e22",
+      "type": "MathNode",
+      "content": "1 + 2 * 3 - 4",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e23",
+      "type": "MathNode",
+      "content": "2*3",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e24",
+      "type": "MathNode",
+      "content": "*23",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e25",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "oval", "note": "empty oval before +" }
+    },
+    {
+      "id": "e26",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "oval", "note": "empty oval between + and -" }
+    },
+    {
+      "id": "e27",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "oval", "note": "empty oval after -" }
+    },
+    {
+      "id": "e28",
+      "type": "MathNode",
+      "content": "+1*23",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e29",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "oval", "note": "empty oval before -" }
+    },
+    {
+      "id": "e30",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "oval", "note": "empty oval after -" }
+    },
+    {
+      "id": "e31",
+      "type": "MathNode",
+      "content": "-+1*234",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "note": "final prefix result, arrow pointing left" }
+    }
+  ],
+  "relationships": [
+    { "type": "Edge", "source": "e1", "target": "e3" },
+    { "type": "Edge", "source": "e1", "target": "e4" },
+    { "type": "Edge", "source": "e11", "target": "e12" },
+    { "type": "Edge", "source": "e13", "target": "e14" },
+    { "type": "Edge", "source": "e7", "target": "e8" },
+    { "type": "Edge", "source": "e9", "target": "e10" },
+    { "type": "Edge", "source": "e16", "target": "e18" },
+    { "type": "Edge", "source": "e20", "target": "e22" },
+    { "type": "Edge", "source": "e22", "target": "e23" },
+    { "type": "Edge", "source": "e23", "target": "e24" },
+    { "type": "Edge", "source": "e24", "target": "e28" },
+    { "type": "Edge", "source": "e28", "target": "e31" }
+  ]
+}

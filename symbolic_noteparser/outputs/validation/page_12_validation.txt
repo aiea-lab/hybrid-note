@@ -1,0 +1,9 @@
+Document ID: DATA_STRUCTURE_page_12
+Elements detected: 31
+Relationships detected: 12
+
+Errors:
+- e6: content must be a string or null
+- e11: content must be a string or null
+- e13: content must be a string or null
+- e18: content must be a string or null

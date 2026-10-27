@@ -1,0 +1,150 @@
+{
+  "document_id": "DATA_STRUCTURE_page_13",
+  "elements": [
+    {
+      "id": "e1",
+      "type": "FocusNode",
+      "content": "9",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": { "style": "circled", "note": "page number" }
+    },
+    {
+      "id": "e2",
+      "type": "EmphasisNode",
+      "content": "Ex:-",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": {}
+    },
+    {
+      "id": "e3",
+      "type": "MathNode",
+      "content": "-+1*234",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "note": "arrow pointing left; labeled 'postfix evaluation'" }
+    },
+    {
+      "id": "e4",
+      "type": "EmphasisNode",
+      "content": "postfix evaluation",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": {}
+    },
+    {
+      "id": "e5",
+      "type": "TableNode",
+      "content": ["3", "7/4", "1/6/4", "6/4", "2/3/4", "3/4", "4"],
+      "page": 1,
+      "location": "upper-middle",
+      "attributes": {
+        "note": "sequence of stack cells for postfix evaluation of -+1*234",
+        "labels_below": ["-", "+", "1", "*", "2", "3", "4"],
+        "intermediate_calcs": ["7-4", "1+6", "2*3"]
+      }
+    },
+    {
+      "id": "e6",
+      "type": "EmphasisNode",
+      "content": "ii>",
+      "page": 1,
+      "location": "center-left",
+      "attributes": {}
+    },
+    {
+      "id": "e7",
+      "type": "MathNode",
+      "content": "-,+,2,*,3,4,1",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "note": "arrow pointing left; labeled 'prefix evaluation'" }
+    },
+    {
+      "id": "e8",
+      "type": "EmphasisNode",
+      "content": "prefix evaluation",
+      "page": 1,
+      "location": "center-right",
+      "attributes": {}
+    },
+    {
+      "id": "e9",
+      "type": "TableNode",
+      "content": ["13", "14/1", "2/12/1", "12/1", "3/4/1", "4/1", "1"],
+      "page": 1,
+      "location": "center-middle",
+      "attributes": {
+        "note": "sequence of stack cells for prefix evaluation of -,+,2,*,3,4,1",
+        "labels_below": ["-", "+", "2", "*", "3", "4", "1"],
+        "intermediate_calcs": ["12+2", "3*4"]
+      }
+    },
+    {
+      "id": "e10",
+      "type": "EmphasisNode",
+      "content": "RECURSION",
+      "page": 1,
+      "location": "center",
+      "attributes": { "style": "underline (squiggly)" }
+    },
+    {
+      "id": "e11",
+      "type": "ListNode",
+      "content": "Direct Recursion",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "list_marker": "i>" }
+    },
+    {
+      "id": "e12",
+      "type": "ListNode",
+      "content": "Tail Recursion",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "list_marker": "a>", "example": "factorial" }
+    },
+    {
+      "id": "e13",
+      "type": "ListNode",
+      "content": "Head Recursion",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "list_marker": "b>", "example": "Tower of Hanoi (ies)" }
+    },
+    {
+      "id": "e14",
+      "type": "ListNode",
+      "content": "Indirect Recursion",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "list_marker": "ii>", "example": "Trees" }
+    },
+    {
+      "id": "e15",
+      "type": "ListNode",
+      "content": "Nested Recursion",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {
+        "list_marker": "iii>",
+        "example": "Ackermann's function (JTO) (DRDO)"
+      }
+    },
+    {
+      "id": "e16",
+      "type": "ListNode",
+      "content": "Excessive Recursion",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "list_marker": "iv>", "example": "fibonacci" }
+    }
+  ],
+  "relationships": [
+    { "type": "Edge", "source": "e3", "target": "e5" },
+    { "type": "Edge", "source": "e7", "target": "e9" },
+    { "type": "Edge", "source": "e11", "target": "e12" },
+    { "type": "Edge", "source": "e11", "target": "e13" }
+  ]
+}

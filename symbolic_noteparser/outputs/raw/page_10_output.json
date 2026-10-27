@@ -1,0 +1,313 @@
+{
+  "document_id": "DATA_STRUCTURE_page_10",
+  "elements": [
+    {
+      "id": "e1",
+      "type": "EmphasisNode",
+      "content": "post",
+      "page": 1,
+      "location": "upper-middle",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e2",
+      "type": "MathNode",
+      "content": "a+b*c",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": {}
+    },
+    {
+      "id": "e3",
+      "type": "MathNode",
+      "content": "b*c",
+      "page": 1,
+      "location": "upper-right",
+      "attributes": {}
+    },
+    {
+      "id": "e4",
+      "type": "MathNode",
+      "content": "log x1",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": {}
+    },
+    {
+      "id": "e5",
+      "type": "FocusNode",
+      "content": "x1",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "style": "circled" }
+    },
+    {
+      "id": "e6",
+      "type": "MathNode",
+      "content": "x1",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": {}
+    },
+    {
+      "id": "e7",
+      "type": "FocusNode",
+      "content": "log",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "style": "circled" }
+    },
+    {
+      "id": "e8",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "upper-left",
+      "attributes": { "style": "circled", "note": "empty circle, content illegible" }
+    },
+    {
+      "id": "e9",
+      "type": "MathNode",
+      "content": "x1 log",
+      "page": 1,
+      "location": "upper-left",
+      "attributes": {}
+    },
+    {
+      "id": "e10",
+      "type": "DateNode",
+      "content": "28.4.2012",
+      "page": 1,
+      "location": "center-left",
+      "attributes": {}
+    },
+    {
+      "id": "e11",
+      "type": "MathNode",
+      "content": "a = -b + c*d/e - f↑g↑h + i*j",
+      "page": 1,
+      "location": "center",
+      "attributes": {}
+    },
+    {
+      "id": "e12",
+      "type": "EmphasisNode",
+      "content": "Sol",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e13",
+      "type": "EmphasisNode",
+      "content": "precedance table",
+      "page": 1,
+      "location": "center-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e14",
+      "type": "MathNode",
+      "content": "a/b*c",
+      "page": 1,
+      "location": "center-right",
+      "attributes": { "note": "occurs above 'pref' label" }
+    },
+    {
+      "id": "e15",
+      "type": "EmphasisNode",
+      "content": "pref",
+      "page": 1,
+      "location": "center-right",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e16",
+      "type": "MathNode",
+      "content": "a/b*c",
+      "page": 1,
+      "location": "center-right",
+      "attributes": { "note": "occurs beneath 'pref' label" }
+    },
+    {
+      "id": "e17",
+      "type": "ListNode",
+      "content": ["- unary", "↑ : Right", "* / : Left associative", "+ - : Left associative"],
+      "page": 1,
+      "location": "center-right",
+      "attributes": { "list_style": "implicit (no bullets/numbers drawn)" }
+    },
+    {
+      "id": "e18",
+      "type": "EmphasisNode",
+      "content": "i>prefix",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "underline" }
+    },
+    {
+      "id": "e19",
+      "type": "FocusNode",
+      "content": "-b",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "circled" }
+    },
+    {
+      "id": "e20",
+      "type": "MathNode",
+      "content": "-b",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e21",
+      "type": "MathNode",
+      "content": "c*d",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e22",
+      "type": "MathNode",
+      "content": "*cd",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e23",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "circled", "note": "empty oval, adjacent text '/e'" }
+    },
+    {
+      "id": "e24",
+      "type": "MathNode",
+      "content": "1*cde",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": {}
+    },
+    {
+      "id": "e25",
+      "type": "FocusNode",
+      "content": "1*cde",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "circled" }
+    },
+    {
+      "id": "e26",
+      "type": "FocusNode",
+      "content": "-b",
+      "page": 1,
+      "location": "lower-left",
+      "attributes": { "style": "circled", "prefix": "+" }
+    },
+    {
+      "id": "e27",
+      "type": "MathNode",
+      "content": "q↑h",
+      "page": 1,
+      "location": "lower-middle",
+      "attributes": {}
+    },
+    {
+      "id": "e28",
+      "type": "MathNode",
+      "content": "↑gh",
+      "page": 1,
+      "location": "lower-middle",
+      "attributes": {}
+    },
+    {
+      "id": "e29",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-middle",
+      "attributes": { "style": "circled", "note": "adjacent text 'f↑'" }
+    },
+    {
+      "id": "e30",
+      "type": "MathNode",
+      "content": "↑f↑gh",
+      "page": 1,
+      "location": "lower-middle",
+      "attributes": {}
+    },
+    {
+      "id": "e31",
+      "type": "MathNode",
+      "content": "i*J",
+      "page": 1,
+      "location": "lower-right",
+      "attributes": {}
+    },
+    {
+      "id": "e32",
+      "type": "MathNode",
+      "content": "*ij",
+      "page": 1,
+      "location": "lower-right",
+      "attributes": {}
+    },
+    {
+      "id": "e33",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-right",
+      "attributes": { "style": "circled", "note": "empty oval" }
+    },
+    {
+      "id": "e34",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-middle",
+      "attributes": { "style": "large oval, blank", "note": "convergence oval left of center" }
+    },
+    {
+      "id": "e35",
+      "type": "FocusNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-middle",
+      "attributes": { "style": "large oval, blank", "note": "convergence oval right of center" }
+    },
+    {
+      "id": "e36",
+      "type": "ContainerNode",
+      "content": null,
+      "page": 1,
+      "location": "lower-middle",
+      "attributes": { "style": "box" }
+    },
+    {
+      "id": "e37",
+      "type": "MathNode",
+      "content": "? = a + - + - b/φ cde ↑ f ↑ gh * ij",
+      "page": 1,
+      "location": "lower-middle",
+      "attributes": { "contained_in": "e36" }
+    }
+  ],
+  "relationships": [
+    { "type": "Edge", "source": "e19", "target": "e26" },
+    { "type": "Edge", "source": "e21", "target": "e25" },
+    { "type": "Edge", "source": "e27", "target": "e30" },
+    { "type": "Edge", "source": "e31", "target": "e33" },
+    { "type": "Edge", "source": "e26", "target": "e34" },
+    { "type": "Edge", "source": "e25", "target": "e34" },
+    { "type": "Edge", "source": "e30", "target": "e35" },
+    { "type": "Edge", "source": "e33", "target": "e35" },
+    { "type": "Edge", "source": "e34", "target": "e36" },
+    { "type": "Edge", "source": "e35", "target": "e36" }
+  ]
+}

@@ -1,0 +1,6 @@
+Document ID: DATA_STRUCTURE_page_14
+Elements detected: 17
+Relationships detected: 10
+
+Errors:
+- e10: invalid node type 'Edge'
