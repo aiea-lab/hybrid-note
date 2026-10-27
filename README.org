@@ -1,7 +1,93 @@
-#+Title: A Research Notebook → Org-mode System
+#+Title: Symbolic Note Parser
 
-The goal of this repo is to capture a pipeline from my handwritten
-notebook into orgmode.
+## Overview
 
-Right now the workflow looks like this: paper notebook -> Scan with
-phone -> auto-upload folder -> auto-rename script -> link into org-mode
+The Symbolic Note Parser epxlores how LLMs can identify speciifc symbolic structures in handwritten notes and represent them in a machine-readable JSON format. Unlike traditional extraction, this project focuses on preserving viusal structures such as bullets, arrows, boxes, circles, equations, and relationships between handwritten elements. 
+
+The currnt prototype uses Claude to generate structured JSON frm handwritten note images and a Python validator to check the output against a predefined schema. 
+
+## Project Structure 
+
+```text
+symbolic_noteparser/
+├── parser.py
+├── README.md
+├── schema/
+│   ├── node_types.json
+│   └── symbolic_note_schema.json
+└── outputs/
+    ├── raw/
+    │   ├── page_10_output.json
+    │   ├── page_11_output.json
+    │   ├── page_12_output.json
+    │   ├── page_13_output.json
+    │   └── page_14_output.json
+    └── validation/
+        ├── page_10_validation.txt
+        ├── page_11_validation.txt
+        ├── page_12_validation.txt
+        ├── page_13_validation.txt
+        └── page_14_validation.txt
+```
+
+
+The original handwritten note images I used aren't included in the repository and are stored locally, but my work for this project could be found at this link: https://drive.google.com/drive/u/0/folders/14X6hT7B9DAItPmFe9RhoesGAFkNEe1wZ. 
+
+
+## Symbolic Structure Taxonomy 
+
+The project defines 14 categories of handwritten symbolic structures along with their JSON representation. 
+
+1. Bullet -- ListNode
+2. Numbered List -- OrderedListNode
+3. Checkbox -- TaskNode
+4. Arrow -- Edge
+5. Date -- DateNode
+6. Highlight -- ImportanceNode
+7. Underline -- EmphasisNode 
+8. Box -- ContainerNode
+9. Sketch -- ImageNode
+10. Equation -- MathNode
+11. Circle -- FocusNode 
+12. Table -- TableNode
+13. Graph/Chart -- GraphNode
+14. Star/Exclamation -- ImportanceNode 
+
+
+## Pipeline 
+
+
+
+1. **Input:** Select a handwritten note image.
+2. **Extraction:** Use Claude to identify symbolic elements and relationships.
+3. **JSON Generation:** Save the extracted information as structured JSON.
+4. **Validation:** Use `parser.py` to check JSON structure, node types, required fields, and relationships.
+
+```text
+Handwritten Note → Claude → Structured JSON → Python Validator → Validation Report
+```
+
+To run the validator from the project directory:
+
+```bash
+python3 parser.py
+```
+
+The Python script validates existing JSON outputs; image extraction is performed separately using Claude.
+
+## Evaluation
+
+The prototype was tested on five handwritten note pages from the ICDAR 2025 Handwritten Notes Understanding Challenge dataset.
+
+- **135** elements and **54** relationships extracted.
+- All five outputs contained valid JSON.
+- **8** schema validation errors identified.
+- Common errors included incorrect symbol classifications and inferred relationships without explicit visual arrows.
+
+## Future Work
+
+- Expand testing to a larger handwritten-note dataset.
+- Improve symbol classification and relationship extraction.
+- Compare additional multimodal LLMs.
+- Develop a user interface for reviewing extracted structures.
+- Integrate structured note conversion with applications such as Notion.
