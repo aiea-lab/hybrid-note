@@ -1,6 +1,6 @@
-import json 
+import json
 import glob
-import os 
+import re
 
 ALLOWED_NODE_TYPES = {
     "ListNode",
@@ -17,6 +17,8 @@ ALLOWED_NODE_TYPES = {
     "GraphNode"
 }
 
+ARRAY_CONTENT_NODE_TYPES = {"ListNode", "OrderedListNode", "TableNode"}
+
 REQUIRED_ELEMNT_FIELDS = {
     "id",
     "type",
@@ -25,6 +27,34 @@ REQUIRED_ELEMNT_FIELDS = {
     "location",
     "attributes"
 }
+
+
+def is_redundant_inline_edge(element, relationships):
+    attributes = element.get("attributes")
+    if element.get("content") is not None or not isinstance(attributes, dict):
+        return False
+
+    note = attributes.get("note")
+    if not isinstance(note, str):
+        return False
+
+    # Older samples describe double-headed arrows in prose alongside their edges.
+    endpoints = re.search(
+        r"\bdouble-headed arrows? connecting\b.*?\b([\w-]+)\s+and\s+([\w-]+)\.?\s*$",
+        note,
+        re.IGNORECASE,
+    )
+    if endpoints is None:
+        return False
+
+    source, target = endpoints.groups()
+    edge_pairs = [
+        (relationship.get("source"), relationship.get("target"))
+        for relationship in relationships
+        if isinstance(relationship, dict) and relationship.get("type") == "Edge"
+    ]
+    return source != target and (source, target) in edge_pairs and (target, source) in edge_pairs
+
 
 def validate_note(file_path, output_path):
     errors = []
@@ -54,6 +84,7 @@ def validate_note(file_path, output_path):
     relationships = data.get("relationships", [])
 
     element_ids = set()
+    redundant_edge_ids = set()
 
     #validating elemnts 
     for element in elements:
@@ -72,13 +103,20 @@ def validate_note(file_path, output_path):
         element_ids.add(element_id)
         node_type = element.get("type")
 
-        if node_type not in ALLOWED_NODE_TYPES:
+        if node_type == "Edge" and is_redundant_inline_edge(element, relationships):
+            redundant_edge_ids.add(element_id)
+            warnings.append(f"{element_id}: ignored inline Edge already recorded in relationships")
+        elif node_type not in ALLOWED_NODE_TYPES:
             errors.append(
-                f"{element_id}: invalid node type '{node_type}'"
-            )
+                f"{element_id}: invalid node type '{node_type}'")
 
-        #schema now expects string or null 
         content = element.get("content")
+        if (
+            node_type in ARRAY_CONTENT_NODE_TYPES
+            and isinstance(content, list)
+            and all(isinstance(item, str) for item in content)
+        ):
+            content = "\n".join(content)
         if content is not None and not isinstance(content, str):
             errors.append(
                 f"{element_id}: content must be a string or null"
@@ -88,6 +126,8 @@ def validate_note(file_path, output_path):
                 f"{element_id}: attributes must be an object"
             )
     
+    element_ids.difference_update(redundant_edge_ids)
+
     #validate relationships 
     for i, relationship in enumerate(relationships, start=1):
         if relationship.get("type") != "Edge":

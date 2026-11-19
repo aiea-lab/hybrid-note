@@ -29,3 +29,20 @@ The parser is currently based on the following symbol types:
 - Table
 - Graph/Chart
 - Star/Exclamation 
+
+## Run the sample validator
+
+From the root of the `hybrid-note` repository, run:
+
+```bash
+cd symbolic_noteparser
+python3 parser.py
+```
+
+The script needs only Python 3. It reads five saved JSON files in
+`outputs/raw/`, one for each sample page from 10 to 14. Claude generated
+these files from handwritten note images in a separate step.
+
+The script writes one report per page to `outputs/validation/`. All five
+samples should report `No errors found.` Page 14 also reports a warning
+about a duplicate arrow whose connections are already recorded.
