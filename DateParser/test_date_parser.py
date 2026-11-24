@@ -111,6 +111,56 @@ class TestDateParser(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.parser.get_date("tues")
 
+    # Tests for find_dates method
+    def test_find_single_date(self):
+        self.assertEqual(
+            self.parser.find_dates("Exam on 10/27"),
+            [date(2026, 10, 27)]
+        )
+
+    def test_find_multiple_dates(self):
+        self.assertEqual(
+            self.parser.find_dates("Exam 10/27 and quiz 11/05"),
+            [date(2026, 10, 27), date(2026, 11, 5)]
+        )
+
+    def test_find_weekday(self):
+        self.assertEqual(
+            self.parser.find_dates("Meeting on Tuesday"),
+            [date(2026, 11, 3)]
+        )
+
+    def test_find_invalid_date(self):
+        self.assertEqual(
+            self.parser.find_dates("Deadline 02/30/2026"),
+            []
+        )
+
+    def test_find_no_dates(self):
+        self.assertEqual(
+            self.parser.find_dates("Hello, I have 25 assignments"),
+            []
+        )
+
+    def test_date_followed_by_period(self):
+        self.assertEqual(
+            self.parser.find_dates("Exam 10/27."),
+            [date(2026, 10, 27)]
+        )
+
+    def test_date_followed_by_comma(self):
+        self.assertEqual(
+            self.parser.find_dates("Exam 10/27, meeting Tuesday."),
+            [date(2026, 10, 27), date(2026, 11, 3)]
+        )
+
+    def test_date_at_end_of_sentence(self):
+        self.assertEqual(
+            self.parser.find_dates("My exam is on 10/27!"),
+            [date(2026, 10, 27)]
+        )
+
+
 
 if __name__ == "__main__":
     unittest.main()

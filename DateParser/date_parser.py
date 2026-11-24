@@ -92,3 +92,25 @@ class DateParser:
         days_difference = target - current
 
         return self.today + timedelta(days=days_difference)
+
+    # Returns a list of dates found in the text
+    def find_dates(self, text):
+        pattern = (
+            r"(?<![\w/\\-])"
+            r"\d{1,4}(?:\s*[-/.\\]\s*\d{1,4}){1,2}"
+            r"(?![\w/\\-]|\.\d)"
+            r"|\b(?:monday|tuesday|wednesday|thursday|"
+            r"friday|saturday|sunday)\b"
+        )
+
+        results = []
+
+        for match in re.finditer(pattern, text, re.IGNORECASE):
+            try:
+                parsed_date = self.parse(match.group())
+                results.append(parsed_date)
+            except ValueError:
+                pass
+
+        return results
+
