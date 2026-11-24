@@ -22,13 +22,14 @@ class DateParser:
 
         return date(year, second, first)
 
-    def _fill_missing(self, year, number):
-        try:
-            return date(year, number, self.today.day)
-        except ValueError:
-            pass
+    def _fill_missing(self, year, month):
+        return date(year, month, self.today.day)
 
-        return date(year, self.today.month, number)
+    def _convert_year(self, year):
+        if year < 50:
+            return 2000 + year
+        else:
+            return 1900 + year
 
     def parse(self, text):
         text = text.strip().lower()
@@ -53,9 +54,18 @@ class DateParser:
             if len(b) == 4:
                 return self._fill_missing(int(b), int(a))
 
-            return self._make_date(
-                self.today.year, int(a), int(b)
-            )
+            try:
+                return self._make_date(
+                    self.today.year, int(a), int(b)
+                )
+            except ValueError:
+                pass
+
+            if 1 <= int(a) <= 12 and len(b) == 2:
+                year = self._convert_year(int(b))
+                return self._fill_missing(year, int(a))
+
+            raise ValueError(f"Invalid date: {text!r}")
 
         if len(parts) == 3:
             a, b, c = parts
@@ -70,6 +80,13 @@ class DateParser:
             if len(c) == 4 and len(a) <= 2 and len(b) <= 2:
                 return self._make_date(
                     int(c), int(a), int(b)
+                )
+
+            if len(a) <= 2 and len(b) <= 2 and len(c) <= 2:
+                year = self._convert_year(int(c))
+
+                return self._make_date(
+                    year, int(a), int(b)
                 )
 
             raise ValueError(
@@ -113,4 +130,3 @@ class DateParser:
                 pass
 
         return results
-
